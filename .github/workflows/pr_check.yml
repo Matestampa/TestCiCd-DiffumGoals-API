@@ -47,8 +47,35 @@ jobs:
           GOALS_USER_LIMIT=2
           GOALS_GLOBAL_LIMIT=100
           CLOUDFRONT_URL="https://32423423423.cloudfront.net/"
-          CLOUDFRONT_KEY_PAIR_ID="DHdfgdfgdfgdfgdfgfd"
-          CLOUDFRONT_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----"
+          CLOUDFRONT_KEY_PAIR_ID="DHSDSUIDH8WE3E7R"
+          CLOUDFRONT_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----
+          MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC56nNOf1v2Bm1V
+          YkbigPjH5qWLDWtRKlHFUaDOpEqt5EY3chRpanwBP+VTMw9sZsJOm0/0/183MWvL
+          H1v8kY+slrG5n6RDNbaLmsKHQAfA4lZjkTBW5iBUq1LksRhR9ZHNRD/l0xOKpOfN
+          +467r8PFn2CRZKxA/WE0rfzqUrDV/bxrRUB0M1XAM0jtQwiFcLx3YNpipOHZtJEz
+          TJBPS8MccjvOt8Ed/dAh5NyDKzBJFCpNbBT2FGRhNmQ+M0QofzbWgSfpQuhzCW33
+          Iay9yTuYwzSdpHAvN0mn7/zINMy6PecM+FFBSpUhl2GoQYpRcV1W/ZKtEFTfQCAG
+          OGt2np+xAgMBAAECggEAARtuNeUVXbY1Fih8iLngQvWqMXejZKQQyoYEDjN27PjJ
+          qW41VEzknJ61N9g+f5ME8FrHFS4xQ7X26etA1BGZTr3301h3+PFehIZWpL0WHACY
+          X6smwxFs9lO6hTGdn2Zy6vDJSofHcgZfmTcsOziowAJM5+iOSkt4xX1uP4yxOPkZ
+          +h46QV8Dss0hxtx5g1tLdqPvDk+9KVexI1qImE/e2xH4DDo1VA0riHa9XMyRBfcW
+          nzOZdZYQc/VJXWRvqSsIABsmgzVNGQe2gyy9TTpzAf2v0Cvek9MEh9HGjXwQ/C+f
+          ENzgauY4HQo8IP091jIzcRXV00ymeuo+ILnQogLtRwKBgQDajmPqSTPJUvNBoDyg
+          tc1fRBzcbt97PHVISFTocnI2cIfUUvHLl+5iven4Vs6gm/HnhM6gllM5crIyXrM6
+          SSGXXdLOHqisazQ9USZgX9BxNX3jHfHEWWiOaPeE6Rk1aKaqRP83Vb1T8cAKnflv
+          uWJ/iF4ZI9Mvyjj7BEcd3xZ6VwKBgQDZxH4HaBZnnXX68ELBGO7sSxtUwE1yILLz
+          YD5pKXD2FaUNqLyw/+wB1z8OCjgnNZVy7tWTZr8WEin1m/0xJPopZoD5JCX29Ku1
+          w/tKLjAN9OfOv4YvJtuHiqqp1xIJLKscPhqL0w5tGcpuMeo6FHYyxXlecTmcG65d
+          Ygj8TjABNwKBgQDJzG+1A6ItYcn57loMidD3BY0ge78dqtUfyKmddw699Wl1QqC/
+          u6kAwxolkwF2iobxnk6rOCHgCWc/2vDiAGRjvt3GM8jKarHxa9xjYBS2cw2phxyU
+          j3lbBNCGiDQefGJnFQ4RqbkGqVEIfJSz9BheaSt5SvrURYQXQfvoOPQoQQKBgDjU
+          hYtLR6WMuzBcqR8ZcaiqxRwt/0gMbocDE+Z/0SH3bhaNdYi/kQi98o+obRUWb8UJ
+          vST1iGKrJNYa+k1r9/j77iaWn22+Vl1eIuMuAI5z3lbfNpZxjpLlxjoCjYtlY9ZA
+          As+AqeAg/eoaDqVPl7USQeU6qS0rMCrgnbWydearAoGAOH0+m8y2ITAmBOeeJ5WK
+          nHdE/6IlDAFyfNuRUI0Nadi3UXM38quzXGM2kamEkxDKDCqytpXHtHLls6v0PzQB
+          x2gOz2V095l779FNcTmStD0fxSinQQBz72dISoPLyogm9dSmSVP4aisTP5mGBp0Q
+          ldao2dyB2VgQcSC/s8HtBSg=
+          -----END PRIVATE KEY-----"
           MONGODB_URL="mongodb://localhost:27017/test"
           EOF
 
