@@ -1,0 +1,56 @@
+name: PR Checks (dev)
+
+on:
+  pull_request:
+    branches:
+      - dev
+    types: [opened, synchronize, reopened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      mongodb:
+        image: mongo:7
+        ports:
+          - 27017:27017
+        options: >-
+          --health-cmd "mongosh --eval 'db.adminCommand(\"ping\")' --quiet"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create .env.test file
+        run: |
+          cat <<'EOF' > .env.test
+          JWT_COOKIE_SECURE="false"
+          JWT_SECRET="nasheee"
+          JWT_EXPIRATION_MS="300000"
+          GOOGLE_CLIENT_ID="998636383461-25eqeqfnn4mt60974359834HGJGHFDH7876kls3hnf5g3h2o.apps.googleusercontent.com"
+          GOOGLE_CLIENT_SECRET="HGDFYTFT36RTEYRGFFBJH"
+          GOOGLE_CALLBACK_URL="http://localhost:3000/users/auth/google/callback"
+          FRONTEND_URL="http://localhost:5500"
+          GOALS_USER_LIMIT=2
+          GOALS_GLOBAL_LIMIT=100
+          CLOUDFRONT_URL="https://32423423423.cloudfront.net/"
+          CLOUDFRONT_KEY_PAIR_ID="DHdfgdfgdfgdfgdfgfd"
+          CLOUDFRONT_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----"
+          MONGODB_URL="mongodb://localhost:27017/test"
+          EOF
+
+      - name: Run tests
+        run: npm run test
