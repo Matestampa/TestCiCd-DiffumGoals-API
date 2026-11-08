@@ -4,15 +4,16 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env APP_ENV=prod NODE_ENV=production node ./src/index.js",
-    "dev": "cross-env APP_ENV=dev nodemon ./src/index.js",
-    "testProd": "cross-env APP_ENV=testProd NODE_ENV=production node ./src/index.js",
-    "test": "cross-env APP_ENV=dev jest"
+    "local": "cross-env APP_ENV=local nodemon ./src/index.js",
+    "dev": "cross-env APP_ENV=dev NODE_ENV=production node ./src/index.js",
+    "test": "cross-env APP_ENV=test jest"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.657.0",
+    "@aws-sdk/client-ssm": "^3.657.0",
     "@aws-sdk/cloudfront-signer": "^3.662.0",
     "@matestampa/diffum-goals_mongoose-schemas": "^1.0.0",
     "bcrypt": "^6.0.0",
@@ -35,7 +36,11 @@
     "winston-cloudwatch": "^6.3.0"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/test_utils\\.js$"
+    ]
   },
   "devDependencies": {
     "jest": "^29.7.0",
