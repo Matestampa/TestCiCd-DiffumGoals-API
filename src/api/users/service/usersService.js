@@ -87,7 +87,7 @@ async function googleOAuth_Service(profile) {
             error: null,
             data: {
                 user_id: user._id,
-                //username: user.username,
+                username: user.username,
                 token: generate_JWT(user._id, user.username)
             }
         };
